@@ -1,7 +1,7 @@
 
 # Emma VoIP
 
-Simple dispatcher and callphone for a proxy sip for send a audio file.
+Simple dispatcher and callphone for a proxy sip to send a audio file.
 
 ## Motivation
 
@@ -9,7 +9,12 @@ I don't find any opensource sollution to do that in a simple way.
 
 ## Synopsis
 
-$ emma -S file.data 
+$ emma -S file.data -C 5 -D data/list.csv
+
+* -S, audio file.
+* -C, concurrency.
+* -D, csv file with numbers to call.
+* -T, timeout 
 
 ## Name
 
