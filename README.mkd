@@ -1,0 +1,19 @@
+
+# Emma VoIP
+
+Simple dispatcher and callphone for a proxy sip for send a audio file.
+
+## Motivation
+
+I don't find any opensource sollution to do that in a simple way.
+
+## Synopsis
+
+$ emma -S file.data 
+
+## Name
+
+App-Emma-Voip is from Emma Mills Nutt became the world's
+first female telephone operator on 1 September 1878 when she 
+started working for the Edwin Holmes Telephone Dispatch 
+(or the Boston Telephone Dispatch company) in Boston, Massachusetts.
