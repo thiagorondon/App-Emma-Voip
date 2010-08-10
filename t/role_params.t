@@ -7,8 +7,8 @@ my $params = Emma::Role::Params->meta;
 
 is_deeply(
     [ sort $params->get_attribute_list() ],
-    [ 'debug', 'filename', 'leg', 'password', 'proxy', 'registrar',
-       'timeout', 'username' ],
+    [ 'debug', 'filename', 'from', 'leg', 'password', 'proxy', 'registrar',
+       'timeout', 'to', 'username' ],
     '... got the right attribute list');
 
 

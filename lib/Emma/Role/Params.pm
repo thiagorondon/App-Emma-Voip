@@ -65,6 +65,20 @@ has password => (
     documentation => 'Password for authorization'
 );
 
+has from => (
+    is => 'rw',
+    isa => 'Str',
+    documentation => 'from sip address',
+    default => ''
+);
+
+has to => (
+    is => 'rw',
+    isa => 'Str',
+    documentation => 'to sip address',
+    required => 1
+);
+
 1;
 
 

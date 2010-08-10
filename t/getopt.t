@@ -13,7 +13,9 @@ local @ARGV = (
     '--leg', '127.0.0.1:1010',
     '--timeout', 50,
     '--username', 'foo', 
-    '--password', 'baz'
+    '--password', 'baz',
+    '--to', 'sip:foo@sip.bar.com',
+    '--from', 'sip:baz@sip.bar.com'
 );
 
 my $app = Emma::Getopt->new_with_options;
