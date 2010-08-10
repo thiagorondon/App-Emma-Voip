@@ -14,6 +14,8 @@ WriteMakefile(
         'Text::CSV' => 1.18,
         'Moose' => 1.09,
         'MooseX::Getopt' => 0.31,
+        'IO::Socket::INET' => 1.31,
+        'namespace::autoclean' => 0.11
     },
     LICENSE => 'perl',
     EXE_FILES => [ 'bin/emma' ],
