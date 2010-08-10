@@ -88,6 +88,12 @@ has concurrency => (
     default => 1
 );
 
+has persists => (
+    is => 'rw',
+    isa => 'Int',
+    documentation => 'N times that we can persist a success call by number',
+    default => 1
+);
 
 1;
 
