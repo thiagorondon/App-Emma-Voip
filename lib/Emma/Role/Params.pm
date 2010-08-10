@@ -81,6 +81,14 @@ has to => (
     required => 1
 );
 
+has concurrency => (
+    is => 'rw',
+    isa => 'Str',
+    documentation => 'How many simultaneous calls do you want to do ?',
+    default => 1
+);
+
+
 1;
 
 
