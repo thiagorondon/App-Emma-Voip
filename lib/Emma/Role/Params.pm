@@ -20,7 +20,8 @@ has proxy => (
     isa => 'IpPort',
     documentation => 'Use outgoing proxy, register there unless registrar
     given',
-    default => ''
+    default => '',
+    required => 1
 );
 
 has registrar => (
@@ -28,7 +29,8 @@ has registrar => (
     isa => 'IpPort',
     documentation => 'Register at given address',
     default => '',
-    required => 1
+    lazy => 1,
+    default => sub { shift->proxy }
 );
 
 has filename => (
