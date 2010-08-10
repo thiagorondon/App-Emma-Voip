@@ -13,10 +13,17 @@ use FindBin qw($Bin);
 use lib "$Bin/../lib";
 
 use Emma::Getopt;
+use Emma::Sip;
 
 sub _main {
+    
     my $app = Emma::Getopt->new_with_options();
-
+    
+    my $sip = Emma::Sip->new(
+        map { $_ => $app->$_ } 
+            grep { $app->$_ } $app->meta->get_attribute_list() );
+   
+    $sip->_prepare;
 }
 
 _main;

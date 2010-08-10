@@ -17,7 +17,7 @@ has debug => (
 
 has proxy => (
     is => 'rw',
-    isa => 'IpPort',
+    isa => 'Str',
     documentation => 'Use outgoing proxy, register there unless registrar
     given',
     default => '',
@@ -26,7 +26,7 @@ has proxy => (
 
 has registrar => (
     is => 'rw',
-    isa => 'IpPort',
+    isa => 'Str',
     documentation => 'Register at given address',
     default => '',
     lazy => 1,
@@ -42,7 +42,7 @@ has filename => (
 
 has leg => (
     is => 'rw',
-    isa => 'IpPort',
+    isa => 'Str',
     documentation => 'Use given local ip[:port] for outgoing leg',
     default => '',
 );

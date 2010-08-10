@@ -1,5 +1,5 @@
    
-package Emma::Sipa;
+package Emma::Sip;
 
 use Moose;
 use namespace::autoclean;
