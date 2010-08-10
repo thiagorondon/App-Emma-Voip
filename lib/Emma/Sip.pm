@@ -63,7 +63,7 @@ sub _prepare () {
     # If I have an only outgoing proxy I could skip this step because constructor
     # can make leg to outgoing_proxy itself
     my @legs;
-    push @legs,$self->leg if $self->leg;
+    push @legs,$leg if $leg;
     foreach my $addr ( $self->proxy,$self->registrar) {
     	$addr || next;
     	if ( ! grep { $_->can_deliver_to( $addr ) } @legs ) {
@@ -95,7 +95,7 @@ sub _prepare () {
     my $rtp_done; # was sending file completed?
     my $call = $ua->invite( $self->to,
     	# echo back, use -1 instead of 0 for not echoing back
-    	init_media => $ua->rtp( 'send_recv', $files[0] ),
+    	init_media => $ua->rtp( 'send_recv', $self->filename ),
     	cb_rtp_done => \$rtp_done,
     	recv_bye => \$peer_hangup,
     	cb_noanswer => \$no_answer,
@@ -103,7 +103,7 @@ sub _prepare () {
     ) || die "invite failed: ".$ua->error;
     die "invite failed(call): ".$call->error if $call->error;
     
-    DEBUG( "Call established (maybe), sending first file $files[0]" );
+    DEBUG( "Call established (maybe), sending first file" );
     $ua->loop( \$rtp_done,\$peer_hangup,\$no_answer );
     
     die "Ooops, no answer." if $no_answer;
