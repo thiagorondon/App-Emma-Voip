@@ -28,6 +28,15 @@ usage: emma [-?] [long options...]
 	--proxy            Use outgoing proxy, register there unless registrar
     given
 
+
+## Cmd
+
+$ emma --filename record.data --to sip:12320493@domain.com --from sip:thiago@gw.domain.com
+
+## Convert a OGG file to "data".
+
+sox -r 44100 -c 2 record.ogg -r 8000 -c 1 -t raw -U record.raw
+
 ## Name
 
 App-Emma-Voip is from Emma Mills Nutt became the world's
